@@ -1,0 +1,10 @@
+{
+  "name": "puyo-ws",
+  "build": { "dockerfile": "Dockerfile", "args": { "NODE_VERSION": "20" } },
+  "remoteUser": "node",
+  "mounts": [
+    "source=${localEnv:USERPROFILE}\\.aws,target=/home/node/.aws,type=bind,consistency=cached"
+  ],
+  "postCreateCommand": "",
+  "forwardPorts": [8080]
+}
